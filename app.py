@@ -18,6 +18,35 @@ slogan = "Feito é melhor que perfeito!" # aspas duplas
 slogan
 print(f'O tipo da variável slogan é {type(slogan)}.')
 
+# aspas_triplas - usado quando para multiplas linhas
+print("""Estamo codando todos os dias
+E estou aprendendo muito!""")
+
+# caracteres de escape
+# \n ou \ invertida para "escalar o caracter"
+print('Olá meu nome é \nSaulo') # exemplo para pular linha
+print('Codar todo os \'dias\'.') # exemplo para deixar aspas na string
+print('arquivo localizado em \c:drive\\arquivo1.txt') # exemplo para retirar o código identificado (\a)
+
+# Preferencialmente salvar string em variaveis
+nome = 'Saulo'
+print(nome)
+
+# veriricar tamanho da string
+print(len(nome))
+
+# DESAFIO
+# imprimir
+# Vamos codar!
+# Vamos 'codar!'
+# Vamos
+ #'codar'
+
+print('Vamos codar!') # Vamos codar!
+print('Vamos \'codar!\'') # Vamos 'codar!'
+print('Vamos \n\'codar!\'')# Vamos
+                            #'codar'
+
 # Packing
 a,b,c,d = 1,2,3,4
 print(a)
