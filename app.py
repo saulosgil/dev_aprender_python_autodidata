@@ -47,6 +47,32 @@ print('Vamos \'codar!\'') # Vamos 'codar!'
 print('Vamos \n\'codar!\'')# Vamos
                             #'codar'
 
+# Strings dinâmicos
+nome = 'Rafael'
+email = 'rafael@gmail.com'
+
+# Olá Rafael, você cadastrou o email rafael@gmail.com, essa informação esta correta?
+print(f'Olá {nome}, você cadastrou o email {email}, essa informação esta correta?')
+
+# DESAFIO 
+nome = 'Carol'
+hobby = 'ouvir música'
+
+# Imprimir 'Olá, sou a Carol e gosto de ouvir música'
+print(f'Olá, sou a {nome} e gosto de {hobby}.')
+
+# DESAFIO
+## monte a seguinte palavra, usando as sílabas como base
+b = 'ba'
+parte2 = 'nica'
+a = 'a'
+r = 'ri'
+parte1 = 'eletrô'
+t = 'te'
+
+# Imprimir 'bateria eletrônica'
+print(f'{b}{t}{r}{a} {parte1}{parte2}')
+
 # Packing
 a,b,c,d = 1,2,3,4
 print(a)
