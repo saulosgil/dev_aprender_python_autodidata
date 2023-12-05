@@ -131,3 +131,50 @@ e = 'perfeito'
 
 print(f'{a.upper()} {b.lower()} {d.upper()} {c.lower()} {e.upper()}')
 print('É melhor FEITO que PERFEITO') 
+
+# Slice, Extraindo partes de um String
+teclado = 'teclado'
+
+print(teclado[2]) # acessa o indice 2, no caso c
+print(teclado[-1]) # acessa o indice a partir do último elemento, no caso -1 = o
+print(teclado[-3]) # acessa o indice a partir do último elemento, no caso a
+
+# identificando o indice de uma string pelo método .index
+print(teclado.index('t')) 
+
+# acessando a última ocorrência de um caracter
+frase = 'Clean Code'
+
+print(frase.rindex('C')) # pega a segunda ocorrência do caracter passado como argumento
+
+# acessando partes de uma string
+link = 'facebook.com/devaprender'
+
+print(link[0])
+print(link[-1])
+print(link[0:5]) # o último indice não é inclído!
+print(link[0:])
+print(link[-5:])
+print(link[5:])
+print(link[:-5])
+
+# DESAFIO 1: Encontre o índice de 'o' dentro da variável biblioteca
+biblioteca = 'Biblioteca'
+
+# respostas
+print(biblioteca[5])
+print(biblioteca[-5])
+print(biblioteca[biblioteca.index('o')])
+
+# DESAFIO 2
+# usando a frase 'Desenvolvimento De Aplicações', imprima apenas 'De Aplicações'
+var = 'Desenvolvimento De Aplicações'
+
+# resposta
+print(var[16:])
+print(var[var.rindex('D'):])
+
+
+
+
+
