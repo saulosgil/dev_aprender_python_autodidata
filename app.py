@@ -174,7 +174,29 @@ var = 'Desenvolvimento De Aplicações'
 print(var[16:])
 print(var[var.rindex('D'):])
 
+# SPLIT E JOIN
 
+frase = 'Olá, bem-vindo a este treinamento!'
 
+print(frase.split()) # separa cada string quando encontra um espaço e coloca numa lista
+print(frase.split(',')) # separa cada string quando encontra uma vírgula e coloca numa lista
+print(frase.split('-')) # separa cada string quando encontra um hífen e coloca numa lista
 
+nomes = 'jhonatan, rafael, carol, amanda, jefferson'
 
+print(nomes.split())
+print(nomes.split(',')) # repare que não seleciona o argumento, no caso, vírgula
+
+hashtags = 'music #guitar #gamer #coder #python'
+
+print(hashtags.split())
+print(hashtags.split('#'))
+print(hashtags.split('#', 3))
+
+# Concatenar strings
+hashtags_separadas_por_espaco = hashtags.split(' ')
+print(hashtags_separadas_por_espaco)
+
+print(','.join(hashtags_separadas_por_espaco))
+print('.'.join(hashtags_separadas_por_espaco))
+print(' '.join(hashtags_separadas_por_espaco))
