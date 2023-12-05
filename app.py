@@ -101,6 +101,33 @@ print(f'A variável_3 é do tipo é {type(variavel_3)};')
 # resposta 4
 print(f'A variável_4 é do tipo é{type(variavel_4)};')
 
+# Métodos comuns de strings
+nome_curso = 'Edição de Vídeo'
+nome_curso_strip = ' Edição de Vídeo ' # com espaços
 
+print(nome_curso)
+print(nome_curso.upper()) # coloca tudo em maiúsculo
+print(nome_curso.lower()) # coloca tudo em minúscula
+print(nome_curso_strip) 
+print(nome_curso_strip.strip()) # remove os espaços
+print(nome_curso_strip.lstrip()) # remove os espaços a esquerda
+print(nome_curso_strip.rstrip()) # remove os espaços a direita
+print(nome_curso.find('ção')) # identifica o indice da primeira string indicada
+print(nome_curso.replace('Vídeo', 'Música')) # identifica a string do primeiro argumento e troca pela segunda no segundo argumento
 
+# DESAFIO
+# Através da criação de string dinâmico e os métdoso de um string que acabou de 
+# aprender, use como base as variáveis a seguir para criar as seguintes frases:
 
+print('É melhor FEITO que PERFEITO') 
+
+a = 'é'
+b = 'MELHOR'
+c = 'QUE'
+d = 'feito'
+e = 'perfeito'
+
+# resposta
+
+print(f'{a.upper()} {b.lower()} {d.upper()} {c.lower()} {e.upper()}')
+print('É melhor FEITO que PERFEITO') 
