@@ -200,3 +200,29 @@ print(hashtags_separadas_por_espaco)
 print(','.join(hashtags_separadas_por_espaco))
 print('.'.join(hashtags_separadas_por_espaco))
 print(' '.join(hashtags_separadas_por_espaco))
+
+# DESAFIOS
+
+frase1 = 'Desafio manipulação de strings'
+frase2 = 'jhonatan,rafael,carol,camilla'
+
+# DESAFIO 1: transforme a frase1 em uma lista de palavras e guarde o resultado em
+# uma variável chamada palavras 2
+palavras1 = frase1.split()
+palavras1
+
+# DESAFIO 2: Transforme a frase2 em uma lista de palavras e guarde o resultado em
+# uma variavel chamada palavras2
+palavras2 = frase2.split(',')
+palavras2
+
+# DESAFIO 3: pegue o palavras' e transforme elas na seguinte string: "Desafio,
+# manipulação,de,strings"
+print(','.join(palavras1))
+
+# DESAFIO 4: pegue o palavras2 e transforme elas na seguinte string: "jhonatan &,
+# rafael & carol & camilla". Imprima o resultado no console
+print(' & '.join(palavras2))
+
+
+
