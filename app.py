@@ -35,7 +35,7 @@ print(nome)
 # veriricar tamanho da string
 print(len(nome))
 
-# DESAFIO
+# DESAFIO🥇
 # imprimir
 # Vamos codar!
 # Vamos 'codar!'
@@ -54,7 +54,7 @@ email = 'rafael@gmail.com'
 # Olá Rafael, você cadastrou o email rafael@gmail.com, essa informação esta correta?
 print(f'Olá {nome}, você cadastrou o email {email}, essa informação esta correta?')
 
-# DESAFIO 
+# DESAFIO 🥇
 nome = 'Carol'
 hobby = 'ouvir música'
 
@@ -80,7 +80,7 @@ print(b)
 print(c)
 print(d)
 
-# DESAFIO
+# DESAFIO🥇
 # Copie e cole as seguintes lçinhas de código para seu editor de código e descubra
 # qual o tipo de cada uma das variáveis.
 variavel_1 = 25.87
@@ -114,7 +114,7 @@ print(nome_curso_strip.rstrip()) # remove os espaços a direita
 print(nome_curso.find('ção')) # identifica o indice da primeira string indicada
 print(nome_curso.replace('Vídeo', 'Música')) # identifica a string do primeiro argumento e troca pela segunda no segundo argumento
 
-# DESAFIO
+# DESAFIO🥇
 # Através da criação de string dinâmico e os métdoso de um string que acabou de 
 # aprender, use como base as variáveis a seguir para criar as seguintes frases:
 print('É melhor FEITO que PERFEITO') 
@@ -155,7 +155,7 @@ print(link[-5:])
 print(link[5:])
 print(link[:-5])
 
-# DESAFIO 1: Encontre o índice de 'o' dentro da variável biblioteca
+# DESAFIO 🥇: Encontre o índice de 'o' dentro da variável biblioteca
 biblioteca = 'Biblioteca'
 
 # respostas
@@ -163,7 +163,7 @@ print(biblioteca[5])
 print(biblioteca[-5])
 print(biblioteca[biblioteca.index('o')])
 
-# DESAFIO 2
+# DESAFIO 🥇
 # usando a frase 'Desenvolvimento De Aplicações', imprima apenas 'De Aplicações'
 var = 'Desenvolvimento De Aplicações'
 
@@ -197,7 +197,7 @@ print(','.join(hashtags_separadas_por_espaco))
 print('.'.join(hashtags_separadas_por_espaco))
 print(' '.join(hashtags_separadas_por_espaco))
 
-# DESAFIOS
+# DESAFIOS🥇
 
 frase1 = 'Desafio manipulação de strings'
 frase2 = 'jhonatan,rafael,carol,camilla'
@@ -294,7 +294,7 @@ prazo = data_de_lancamento - data_atual
 print(prazo)
 print(prazo.days)
 
-# DESAFIO
+# DESAFIO🥇
 # Quantos dias faltam para meu aniversário
 from datetime import datetime
 
@@ -310,10 +310,42 @@ print(dias_para_meu_niver.days)
 
 # outra forma mais curta
 meu_niver = datetime(2024,9,16)
+
 dias_para_meu_niver = meu_niver - datetime.now()
 print(dias_para_meu_niver)
 print(dias_para_meu_niver.days)
 
+# VALORES ALEATÓRIOS COM RANDOM
+import random
+
+print(random.random()) # gera valor aleatório de 0.0 a 1.0
+print(random.uniform(4, 10)) # gera valor aleatório em um intervalo (float)
+print(random.randint(4, 10)) # gera valor aleatório em um intervalo (int)
+
+# Escolher valor aleatório
+cores = ['verde', 'vermelho', 'azul']
+print(random.choice(cores))
+print(random.choices(cores, k=2)) # permite escolher o número de valores aleatórios
+
+# embaralhar
+
+cartas_de_um_baralho = ['carta1', 'carta2', 'carta3', 'carta4']
+print(random.shuffle(cartas_de_um_baralho)) # embaralha, mas não retorna a lista
+print(cartas_de_um_baralho)
 
 
+​​# DESAFIO 🥇
+# Desafios Random 
+# 1. Você quer simular a opção de jogar uma moeda e resultar em cara ou coroa
+# jogue as opções dentro de uma variável e depois crie um programa que imprimir 'cara' ou 'coroa' na tela
+moeda = ['cara', 'coroa']
+print(random.choice(moeda))
 
+# 2. Você quer fazer um sorteio entre 5 nomes em uma lista de nomes
+# Crie uma lista de 5 nomes e sorteie um nome de dentro dessa lista e exiba na tela
+nomes = ['Saulo', 'Alice', 'Adriana', 'Suzeli', ' Silvandro']
+print(random.choice(nomes))
+
+# 3. você quer escolher aleatóriamente um número de 10-100
+# Imprima na tela um valor aleatório entre 10 e 100
+print(random.randint(10, 10))
