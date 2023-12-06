@@ -233,3 +233,41 @@ print(type(senha)) # a resposta sempre é uma str
 quantidade_de_filmes = int(input('Quantos filmes você viu esse mês? '))
 print(type(quantidade_de_filmes))
 
+# TIPOS DE NÚMEROS QUE PODEM SER UTILIZADOS NO PYTHON
+
+a = 20
+b = 20.5
+type(a)
+type(b)
+
+# operações matemáticas
+
+print(10 + 6) 
+print(10 - 6)
+print(10 * 6)
+print(10 / 6)
+print(10 // 6) # divisão de inteiro
+print(10 % 6) # modulus
+print(10 ** 6) # exponenciais
+
+# Atalho para atribuição mais rápida
+a = 10
+a = a + 5
+a += 5 # soma e atribui novo valor
+
+b = 20
+b = 20 - 2
+b -= 2 # subtrai e atribui novo valor
+
+# operações matemáticas comuns
+
+# arredondamento
+
+print(round(5.7)) 
+
+# caso queira forçar o arredondamento para baixo ou para cima, podemos utilizar a
+# biblioteca math e usar as funcões ceil e floor 
+
+import math
+print(math.ceil(2.2)) # arredonda para cima
+print(math.floor(2.2)) # arredonda para baixo
