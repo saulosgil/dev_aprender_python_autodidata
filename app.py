@@ -362,3 +362,15 @@ CTRL+P+ENTER: navega entre os arquivos e abre em janela lateral/paralela
 CTRL+W: fehc a aba
 F12: Navega até o cófigo fonte da função (documentação)
 """
+# DEBUG
+print('Olá')
+
+def calcular_preco_combo(pizza, refrigerante):
+    total = pizza + refrigerante
+    print(total)
+
+# calcular_preco_combo(30, 'Vinte reais') # vinte como str dá erro
+calcular_preco_combo(30, 20) # debugado
+
+print('Programa finalizado')
+
