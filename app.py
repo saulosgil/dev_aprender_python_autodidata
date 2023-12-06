@@ -224,5 +224,12 @@ print(','.join(palavras1))
 # rafael & carol & camilla". Imprima o resultado no console
 print(' & '.join(palavras2))
 
+# RECEBENDO DADOS DO USUÁRIO - INPUT
 
+senha = input('Digite sua senha: ')
+print(senha)
+print(type(senha)) # a resposta sempre é uma str
+
+quantidade_de_filmes = int(input('Quantos filmes você viu esse mês? '))
+print(type(quantidade_de_filmes))
 
