@@ -83,7 +83,6 @@ print(d)
 # DESAFIO
 # Copie e cole as seguintes lçinhas de código para seu editor de código e descubra
 # qual o tipo de cada uma das variáveis.
-
 variavel_1 = 25.87
 variavel_2 = True
 variavel_3 = 'Bom dia!'
@@ -118,7 +117,6 @@ print(nome_curso.replace('Vídeo', 'Música')) # identifica a string do primeiro
 # DESAFIO
 # Através da criação de string dinâmico e os métdoso de um string que acabou de 
 # aprender, use como base as variáveis a seguir para criar as seguintes frases:
-
 print('É melhor FEITO que PERFEITO') 
 
 a = 'é'
@@ -128,7 +126,6 @@ d = 'feito'
 e = 'perfeito'
 
 # resposta
-
 print(f'{a.upper()} {b.lower()} {d.upper()} {c.lower()} {e.upper()}')
 print('É melhor FEITO que PERFEITO') 
 
@@ -175,7 +172,6 @@ print(var[16:])
 print(var[var.rindex('D'):])
 
 # SPLIT E JOIN
-
 frase = 'Olá, bem-vindo a este treinamento!'
 
 print(frase.split()) # separa cada string quando encontra um espaço e coloca numa lista
@@ -225,7 +221,6 @@ print(','.join(palavras1))
 print(' & '.join(palavras2))
 
 # RECEBENDO DADOS DO USUÁRIO - INPUT
-
 senha = input('Digite sua senha: ')
 print(senha)
 print(type(senha)) # a resposta sempre é uma str
@@ -234,14 +229,12 @@ quantidade_de_filmes = int(input('Quantos filmes você viu esse mês? '))
 print(type(quantidade_de_filmes))
 
 # TIPOS DE NÚMEROS QUE PODEM SER UTILIZADOS NO PYTHON
-
 a = 20
 b = 20.5
 type(a)
 type(b)
 
 # operações matemáticas
-
 print(10 + 6) 
 print(10 - 6)
 print(10 * 6)
@@ -262,12 +255,65 @@ b -= 2 # subtrai e atribui novo valor
 # operações matemáticas comuns
 
 # arredondamento
-
 print(round(5.7)) 
 
 # caso queira forçar o arredondamento para baixo ou para cima, podemos utilizar a
 # biblioteca math e usar as funcões ceil e floor 
-
 import math
+
 print(math.ceil(2.2)) # arredonda para cima
 print(math.floor(2.2)) # arredonda para baixo
+
+# DATETIME E TEMPO
+from datetime import datetime
+
+print(datetime.now())
+print(datetime.now().day)
+print(datetime.now().month)
+print(datetime.now().year)
+
+# criar uma data
+lancamento_app = datetime(2021, 5, 28)
+print(lancamento_app)
+
+# quero receber a data lançamento do meu app
+data_de_lancamento = input('Quando devemos lançar o aplicativo?')
+print(data_de_lancamento)
+print(type(data_de_lancamento)) # resultado do input é str
+
+# Converter para que o resultado do input de str para datetime
+data_de_lancamento = datetime.strptime(input('Quando devemos lançar o aplicativo?'), '%d/%m/%Y')
+print(data_de_lancamento)
+print(type(data_de_lancamento)) # resultado agora é datetime
+
+# Calcular intervalo entre datas
+data_atual = datetime.now()
+print(data_atual)
+
+prazo = data_de_lancamento - data_atual
+print(prazo)
+print(prazo.days)
+
+# DESAFIO
+# Quantos dias faltam para meu aniversário
+from datetime import datetime
+
+data_atual = datetime.now()
+print(data_atual)
+
+meu_niver = datetime.strptime('16/09/2024', '%d/%m/%Y')
+print(meu_niver)
+
+dias_para_meu_niver = meu_niver - data_atual
+print(dias_para_meu_niver)
+print(dias_para_meu_niver.days)
+
+# outra forma mais curta
+meu_niver = datetime(2024,9,16)
+dias_para_meu_niver = meu_niver - datetime.now()
+print(dias_para_meu_niver)
+print(dias_para_meu_niver.days)
+
+
+
+
