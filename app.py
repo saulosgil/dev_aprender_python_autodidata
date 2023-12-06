@@ -359,7 +359,7 @@ CTRL+B: habilita/desabilita barra lateral de arquivos
 CTRL+': habilita/desabilita terminal
 CTRL+P: navega entre os arquivos
 CTRL+P+ENTER: navega entre os arquivos e abre em janela lateral/paralela
-CTRL+W: fehc a aba
+CTRL+W: fecha aba
 F12: Navega até o cófigo fonte da função (documentação)
 """
 # DEBUG
