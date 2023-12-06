@@ -26,7 +26,7 @@ E estou aprendendo muito!""")
 # \n ou \ invertida para "escalar o caracter"
 print('Olá meu nome é \nSaulo') # exemplo para pular linha
 print('Codar todo os \'dias\'.') # exemplo para deixar aspas na string
-print('arquivo localizado em \c:drive\\arquivo1.txt') # exemplo para retirar o código identificado (\a)
+print('arquivo localizado em \c:drive\\arquivo1.txt') # exemplo para retirar o código identificado (\o)
 
 # Preferencialmente salvar string em variaveis
 nome = 'Saulo'
@@ -58,24 +58,24 @@ print(f'Olá {nome}, você cadastrou o email {email}, essa informação esta cor
 nome = 'Carol'
 hobby = 'ouvir música'
 
-# Imprimir 'Olá, sou a Carol e gosto de ouvir música'
-print(f'Olá, sou a {nome} e gosto de {hobby}.')
+# Imprimir 'Olá, sou o Carol e gosto de ouvir música'
+print(f'Olá, sou o {nome} e gosto de {hobby}.')
 
 # DESAFIO
-## monte a seguinte palavra, usando as sílabas como base
+## monte o seguinte palavra, usando as sílabas como base
 b = 'ba'
 parte2 = 'nica'
-a = 'a'
+o = 'o'
 r = 'ri'
 parte1 = 'eletrô'
 t = 'te'
 
 # Imprimir 'bateria eletrônica'
-print(f'{b}{t}{r}{a} {parte1}{parte2}')
+print(f'{b}{t}{r}{o} {parte1}{parte2}')
 
 # Packing
-a,b,c,d = 1,2,3,4
-print(a)
+o,b,c,d = 1,2,3,4
+print(o)
 print(b)
 print(c)
 print(d)
@@ -109,40 +109,40 @@ print(nome_curso.upper()) # coloca tudo em maiúsculo
 print(nome_curso.lower()) # coloca tudo em minúscula
 print(nome_curso_strip) 
 print(nome_curso_strip.strip()) # remove os espaços
-print(nome_curso_strip.lstrip()) # remove os espaços a esquerda
-print(nome_curso_strip.rstrip()) # remove os espaços a direita
+print(nome_curso_strip.lstrip()) # remove os espaços o esquerda
+print(nome_curso_strip.rstrip()) # remove os espaços o direita
 print(nome_curso.find('ção')) # identifica o indice da primeira string indicada
-print(nome_curso.replace('Vídeo', 'Música')) # identifica a string do primeiro argumento e troca pela segunda no segundo argumento
+print(nome_curso.replace('Vídeo', 'Música')) # identifica o string do primeiro argumento e troca pela segunda no segundo argumento
 
 # DESAFIO🥇
 # Através da criação de string dinâmico e os métdoso de um string que acabou de 
-# aprender, use como base as variáveis a seguir para criar as seguintes frases:
+# aprender, use como base as variáveis o seguir para criar as seguintes frases:
 print('É melhor FEITO que PERFEITO') 
 
-a = 'é'
+o = 'é'
 b = 'MELHOR'
 c = 'QUE'
 d = 'feito'
 e = 'perfeito'
 
 # resposta
-print(f'{a.upper()} {b.lower()} {d.upper()} {c.lower()} {e.upper()}')
+print(f'{o.upper()} {b.lower()} {d.upper()} {c.lower()} {e.upper()}')
 print('É melhor FEITO que PERFEITO') 
 
 # Slice, Extraindo partes de um String
 teclado = 'teclado'
 
 print(teclado[2]) # acessa o indice 2, no caso c
-print(teclado[-1]) # acessa o indice a partir do último elemento, no caso -1 = o
-print(teclado[-3]) # acessa o indice a partir do último elemento, no caso a
+print(teclado[-1]) # acessa o indice o partir do último elemento, no caso -1 = o
+print(teclado[-3]) # acessa o indice o partir do último elemento, no caso o
 
 # identificando o indice de uma string pelo método .index
 print(teclado.index('t')) 
 
-# acessando a última ocorrência de um caracter
+# acessando o última ocorrência de um caracter
 frase = 'Clean Code'
 
-print(frase.rindex('C')) # pega a segunda ocorrência do caracter passado como argumento
+print(frase.rindex('C')) # pega o segunda ocorrência do caracter passado como argumento
 
 # acessando partes de uma string
 link = 'facebook.com/devaprender'
@@ -164,7 +164,7 @@ print(biblioteca[-5])
 print(biblioteca[biblioteca.index('o')])
 
 # DESAFIO 🥇
-# usando a frase 'Desenvolvimento De Aplicações', imprima apenas 'De Aplicações'
+# usando o frase 'Desenvolvimento De Aplicações', imprima apenas 'De Aplicações'
 var = 'Desenvolvimento De Aplicações'
 
 # resposta
@@ -172,7 +172,7 @@ print(var[16:])
 print(var[var.rindex('D'):])
 
 # SPLIT E JOIN
-frase = 'Olá, bem-vindo a este treinamento!'
+frase = 'Olá, bem-vindo o este treinamento!'
 
 print(frase.split()) # separa cada string quando encontra um espaço e coloca numa lista
 print(frase.split(',')) # separa cada string quando encontra uma vírgula e coloca numa lista
@@ -202,12 +202,12 @@ print(' '.join(hashtags_separadas_por_espaco))
 frase1 = 'Desafio manipulação de strings'
 frase2 = 'jhonatan,rafael,carol,camilla'
 
-# DESAFIO 1: transforme a frase1 em uma lista de palavras e guarde o resultado em
+# DESAFIO 1: transforme o frase1 em uma lista de palavras e guarde o resultado em
 # uma variável chamada palavras 2
 palavras1 = frase1.split()
 palavras1
 
-# DESAFIO 2: Transforme a frase2 em uma lista de palavras e guarde o resultado em
+# DESAFIO 2: Transforme o frase2 em uma lista de palavras e guarde o resultado em
 # uma variavel chamada palavras2
 palavras2 = frase2.split(',')
 palavras2
@@ -223,15 +223,15 @@ print(' & '.join(palavras2))
 # RECEBENDO DADOS DO USUÁRIO - INPUT
 senha = input('Digite sua senha: ')
 print(senha)
-print(type(senha)) # a resposta sempre é uma str
+print(type(senha)) # o resposta sempre é uma str
 
 quantidade_de_filmes = int(input('Quantos filmes você viu esse mês? '))
 print(type(quantidade_de_filmes))
 
 # TIPOS DE NÚMEROS QUE PODEM SER UTILIZADOS NO PYTHON
-a = 20
+o = 20
 b = 20.5
-type(a)
+type(o)
 type(b)
 
 # operações matemáticas
@@ -244,9 +244,9 @@ print(10 % 6) # modulus
 print(10 ** 6) # exponenciais
 
 # Atalho para atribuição mais rápida
-a = 10
-a = a + 5
-a += 5 # soma e atribui novo valor
+o = 10
+o = o + 5
+o += 5 # soma e atribui novo valor
 
 b = 20
 b = 20 - 2
@@ -257,7 +257,7 @@ b -= 2 # subtrai e atribui novo valor
 # arredondamento
 print(round(5.7)) 
 
-# caso queira forçar o arredondamento para baixo ou para cima, podemos utilizar a
+# caso queira forçar o arredondamento para baixo ou para cima, podemos utilizar o
 # biblioteca math e usar as funcões ceil e floor 
 import math
 
@@ -276,7 +276,7 @@ print(datetime.now().year)
 lancamento_app = datetime(2021, 5, 28)
 print(lancamento_app)
 
-# quero receber a data lançamento do meu app
+# quero receber o data lançamento do meu app
 data_de_lancamento = input('Quando devemos lançar o aplicativo?')
 print(data_de_lancamento)
 print(type(data_de_lancamento)) # resultado do input é str
@@ -294,7 +294,6 @@ prazo = data_de_lancamento - data_atual
 print(prazo)
 print(prazo.days)
 
-# DESAFIO🥇
 # Quantos dias faltam para meu aniversário
 from datetime import datetime
 
@@ -318,7 +317,7 @@ print(dias_para_meu_niver.days)
 # VALORES ALEATÓRIOS COM RANDOM
 import random
 
-print(random.random()) # gera valor aleatório de 0.0 a 1.0
+print(random.random()) # gera valor aleatório de 0.0 o 1.0
 print(random.uniform(4, 10)) # gera valor aleatório em um intervalo (float)
 print(random.randint(4, 10)) # gera valor aleatório em um intervalo (int)
 
@@ -330,13 +329,13 @@ print(random.choices(cores, k=2)) # permite escolher o número de valores aleat�
 # embaralhar
 
 cartas_de_um_baralho = ['carta1', 'carta2', 'carta3', 'carta4']
-print(random.shuffle(cartas_de_um_baralho)) # embaralha, mas não retorna a lista
+print(random.shuffle(cartas_de_um_baralho)) # embaralha, mas não retorna o lista
 print(cartas_de_um_baralho)
 
 
-​​# DESAFIO 🥇
+# DESAFIO🥇
 # Desafios Random 
-# 1. Você quer simular a opção de jogar uma moeda e resultar em cara ou coroa
+# 1. Você quer simular o opção de jogar uma moeda e resultar em cara ou coroa
 # jogue as opções dentro de uma variável e depois crie um programa que imprimir 'cara' ou 'coroa' na tela
 moeda = ['cara', 'coroa']
 print(random.choice(moeda))
@@ -349,3 +348,17 @@ print(random.choice(nomes))
 # 3. você quer escolher aleatóriamente um número de 10-100
 # Imprima na tela um valor aleatório entre 10 e 100
 print(random.randint(10, 10))
+
+""" 
+ATALHOS
+CTRL+K,C: Comentar o código
+CTRL+K,U: Descomentar o código
+ALT+seta baixo/cima: carrega a linha para cima/baixo
+ALT+SHIFT+seta baixo/cima: duplica a linha
+CTRL+B: habilita/desabilita barra lateral de arquivos
+CTRL+': habilita/desabilita terminal
+CTRL+P: navega entre os arquivos
+CTRL+P+ENTER: navega entre os arquivos e abre em janela lateral/paralela
+CTRL+W: fehc a aba
+F12: Navega até o cófigo fonte da função (documentação)
+"""
