@@ -374,3 +374,31 @@ calcular_preco_combo(30, 20) # debugado
 
 print('Programa finalizado')
 
+# OPERADORES LÓGICOS 
+# Pq queremos comparar ?
+idade = 15
+
+print(idade > 17)
+print(idade < 17)
+print(idade <= 17)
+print(idade >= 17)
+print(idade == 17)
+print(idade != 17)
+
+# Comparações entre outros tipo
+print(True == False)
+print('Rafael' == 'rafael')
+print('b' > 'a')
+print(5 == '5')
+
+# Vamos pensar por exemplo no seguinte:
+idade = 21
+possui_convite = False
+filho_do_dono = True
+
+print((idade >= 21) and (possui_convite == True)) # and - se uma condição for false, ele retorna false
+print((idade >= 21) or (possui_convite == True)) # or - se uma condição for true, ele retorna true
+
+# maior de 21 anos E possui_convite OU seja filho do dono
+print((idade > 21 and possui_convite == True) or (filho_do_dono == True))
+
