@@ -598,4 +598,57 @@ velocidade = 50
 
 print('Você foi multado') if velocidade > 100 else print('Siga em frente')
 
+# LOOP FOR (LAÇO FOR)
+for numero in range(1,6):
+    print('carregando', numero)
 
+# Exemplo
+nomes = ['jeff', 'carl', 'jean', 'luke']
+
+for nome in nomes:
+    print(nome)
+
+'''
+# Desafio 1  🥇
+Usando um loop, exiba na tela: Estamos em X
+onde x é um valor iniciando em 18 e finalizando em 110
+'''
+for x in range(18, 111):
+    print('Estamos em', x)
+'''
+# Desafio 2
+# Você precisa de 10 passos para finalizar uma tarefa, exiba na tela, usando loop
+#  for a seguinte frase realizando passo x
+'''
+for tarefa in range(1, 11):
+    print('Realizando a tarefa', tarefa)
+
+# fazendo de trás para frente
+for tarefa in range(1, 11):
+    print('Faltam', 11 - tarefa)
+
+# NESTED LOOPS (LOOPS ANINHADOS)
+# Pais + estação
+
+paises = ['brasil', 'india', 'estados unidos']
+estacoes_do_ano = ['primavera', 'verão', 'outono', 'inverno']
+
+for pais in paises:
+    for estacao in estacoes_do_ano:
+        print(f'{pais} {estacao}')
+
+# Exemplo
+for x in range(1, 11):
+    for y in range(1,6):
+        print(f'valor externo de {x} e interno de {y}')
+
+'''
+# Desafio 1  🥇
+Imprima na tela a marca + celular de todos os celulares, usando as informações baixo
+'''
+celulares = ['Asus', 'Samsung', 'Sony', 'IPhone']
+versoes = ['Plus', 'Premium Plus', 'Premium Deluxe', 'Plus Premium Ultra']
+
+for marca in celulares:
+    for versao in versoes:
+        print(f'{marca} {versao}')
