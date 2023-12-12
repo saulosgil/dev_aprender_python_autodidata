@@ -716,6 +716,73 @@ while contador >= 0:
     print(contador)
     contador -= 1
 
+# Pass - avisa ao interpretador para seguir adiante e evita o erro de sintaxe do loop
+numero = 0
 
+while numero < 5:
+    pass
 
+for numero in range(10):
+    pass
 
+# Continue - ignorar/pular
+for numero in range(100):
+    if numero % 2 == 0: # verifica se é par
+        print(numero)
+    else:
+        continue # se não for par, ele permite o loop continuar
+
+# Break - interromper a iteração
+# Continue - ignorar/pular
+for numero in range(100):
+    if numero % 2 == 0: # verifica se é par
+        print(numero)
+    else:
+        break # se não for par, ele interrompe o loop
+
+# Exemplo
+frutas = ['Maça', 'Manga', 'Laranja', 'Morango']
+
+# continue
+for fruta in frutas:
+    if fruta == 'Manga': # quando encontar manga, ele pula e continua o loop
+        continue
+    print(f'{fruta} adicionada na dieta')
+
+frutas = ['Maça', 'Manga', 'Laranja', 'Morango']
+
+# break
+for fruta in frutas:
+    if fruta == 'Manga': # quando encontar manga, ele interrompe o loop
+        break
+    print(f'{fruta} adicionada na dieta')
+
+'''
+​# DESAFIOS 🥇
+
+## Desafio 1
+Use a operação necessária(break ou continue) para que a seguinte condição aconteça.
+
+* Ao chegar ao estilo "Rap" o mesmo não deve ser impresso na tela
+estilos = ['Hip-Hop','Rock','Rap','Pop']
+'''
+estilos = ['Hip-Hop','Rock','Rap','Pop']
+
+for estilo in estilos:
+    if estilo == 'Rap':
+        continue
+    else:
+        print(estilo)
+
+'''
+## Desafio 2 
+Use a operação necessária(braek ou continue) para que a seguinte condição aconteça:
+
+* Ao chegar ao estilo "Rock" a execução deve interrompida 
+'''
+estilos = ['Hip-Hop','Rock','Rap','Pop']
+
+for estilo in estilos:
+    if estilo == 'Rock':
+        break
+    print(estilo)
