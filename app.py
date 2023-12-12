@@ -637,6 +637,9 @@ for pais in paises:
     for estacao in estacoes_do_ano:
         print(f'{pais} {estacao}')
 
+for letra in 'Programação':
+    print(letra)
+
 # Exemplo
 for x in range(1, 11):
     for y in range(1,6):
