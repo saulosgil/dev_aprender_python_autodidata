@@ -786,3 +786,84 @@ for estilo in estilos:
     if estilo == 'Rock':
         break
     print(estilo)
+
+# FUNÇÕES
+'''
+SINTAXE
+def nome_da_funcao():
+    comandos
+'''
+
+# Exemplo
+def dar_boas_vindas():
+    print('Bem-vindo!')
+
+dar_boas_vindas() # chama a função
+
+# Exemplo com parâmetros
+def dar_boas_vindas_personalizado(nome): # argumento nome
+    print(f'Bem-vindo(a) {nome}')
+
+dar_boas_vindas_personalizado('Saulo')
+
+# Valor/argumento padrão
+def apresentar_lugar(lugar='nossa loja'): # argumentos padrões devem estar incluidos no final da lista de argumentos
+    print(f'Conheça {lugar}')
+
+apresentar_lugar()
+
+# Dois argumentos padrão 
+def apresentar_lugar(horario_funcionamento, lugar='nossa loja'): # argumentos padrões devem estar incluidos no final da lista de argumentos
+    print(f'Conheça {lugar}, funcionamento das {horario_funcionamento}')
+
+apresentar_lugar('8:00 as 18:00', 'Disney')
+
+# Desafio🥇
+
+# DESAFIO 1 - Crie uma função chamada gerar_nome_completo que recebe como parâmetro o nome
+#  e sobrenome de alguém e dá boas vindas para essa pessoa
+def gerar_nome_completo(nome, sobrenome):
+    print(f'Bem-vindo(a) {nome} {sobrenome}')
+
+gerar_nome_completo('Saulo', 'Gil')
+
+# DESAFIO 2 - # Crie uma função chamada calcular_valores que recebe 2 parâmetros o 
+# primeiro o preco de um produto e o segundo parâmetro é a quantidade, porém a quantidade
+# deve haver um valor padrão de 1. Sua função deve exibir o resultado do preço do produto,
+#  multiplicado a quantidade escolhida.
+def calcular_valores(preco_produto, quantidade=1):
+    print(preco_produto*quantidade)
+
+calcular_valores(1.50, 2)
+
+# PROCESSAR VS RETORNAR
+# função que apenas processa dados (imprime na tela)
+print('olá')
+
+#função que retorna/armazena valores
+cidade = input('Qual a sua cidade') # a fç input permite armazenar o dado em uma variável
+'''
+Como escolher entre funções que processam vs. retornam dados?
+Faça a seguinte pergunta:
+Eu vou precisar usar essa informação na lógica do meu programa?
+OU
+Só preciso processar esse dado, mas não irei utilizar mais ele depois?
+'''
+# Processa o dado 
+def exibir_cotacao_do_dia(moeda):
+    if moeda == 'usd':
+        print(5.47)
+
+exibir_cotacao_do_dia('usd') # imprime o resultado
+
+# Armazena o dado retornado pela função e processa depois
+def obter_cotacao_do_dia(moeda):
+    if moeda =='usd':
+        return 5.47
+
+cotacao = obter_cotacao_do_dia('usd') # permite armazenar o dado para usar no programa
+# exemplo
+if cotacao > 5:
+    print('Investir em ações americanas')
+else:
+    print('Cotação não favorável')
