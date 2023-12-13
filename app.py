@@ -940,3 +940,54 @@ def fazer_calculo(nome, *args, **kwargs):
         print(kwarg)
 
 fazer_calculo('Jeff',4,6,3,7,a=1,b=2,c=3)
+
+# Decorators
+def meu_decorator(funcao):
+    def wrapper():
+        print('Antes')
+        funcao()
+        print('Depois')
+    return wrapper
+
+# Função que irá dentro do decorator
+def parabenizar():
+    print('Parabens!!!!')
+
+resultado = meu_decorator(parabenizar)
+resultado()
+
+# Simplificando o decorator @
+# Decorators
+def meu_decorator(funcao):
+    def wrapper():
+        print('Antes')
+        funcao()
+        print('Depois')
+    return wrapper
+
+@meu_decorator # isso descarta a necessidade de chamar a fç decorator como no exemplo acima
+def parabenizar():
+    print('Parabens!!!!')
+
+parabenizar()
+
+# Desafio 🥇
+'''
+Crie um decorator que irá pegar a função que for passado para ele e imprimir o horario atual
+antes de executar a função e depois imprimir o horário após ter finalizado a execução da função
+    *Dica: você terá que usar o módulo datetime para conseguir o horario atual
+'''
+from datetime import datetime
+
+def monitorar_horario(funcao):
+    def monitor():
+        print(datetime.now())
+        funcao()
+        print(datetime.now())
+    return monitor
+
+@monitorar_horario # isso descarta a necessidade de chamar a fç decorator como no exemplo acima
+def baixar_musicas():
+    print('Baixando músicas')
+
+baixar_musicas()
