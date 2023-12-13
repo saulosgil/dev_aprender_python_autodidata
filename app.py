@@ -902,4 +902,41 @@ def gerar_objeto_personalizado(cor,*, altura, formato):
 
 gerar_objeto_personalizado('branco',altura=160,formato='quadrado')
 
+# N° de argumentos (posicionais dinâmicos)
+def somar(*valores, b): 
+    print(valores)
+'''
+o * indica que vc pode passar varios valores e isso será armazendo em uma tupla
+Além disso, o segundo argumento OBRIGATÓRIAMENTE deve estar nomeado na função
+'''
+somar(10,20,5, b=5)
 
+# Devido o armazenamento em tupla, podemos usar um loop para somar os valores
+def somar(*valores, b): 
+    print(valores)
+    for valor in valores:
+        b += valor
+    print(b)
+
+somar(10,20,5, b=5)
+
+# Kwargs - Keywords arguments **
+def concatenar(**palavras):
+    frase = ''
+    for palavra in palavras.values():
+        frase += palavra + ' '
+        print(frase)
+
+concatenar(a='Nós', b='Somos', c='Pythonistas', d='profissionais')
+
+# Exemplo
+def fazer_calculo(nome, *args, **kwargs):
+    print(nome)
+    print(args)
+    print(kwargs)
+    for arg in args:
+        print(arg)
+    for kwarg in kwargs:
+        print(kwarg)
+
+fazer_calculo('Jeff',4,6,3,7,a=1,b=2,c=3)
