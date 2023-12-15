@@ -991,3 +991,69 @@ def baixar_musicas():
     print('Baixando músicas')
 
 baixar_musicas()
+
+# COLEÇÕES
+
+# Criando listas com Python
+
+# listas
+listas = [10,20,30]
+print(listas[0]) # acessando usando o indice
+
+# Descobrir onde  item esta usando o método index
+precos = [5,6,3,4,36,2,54,756,231,645,65,21,456,64,32,1]
+print(precos[precos.index(4)]) # retorna o valor dentro da lista sem saber o indice
+print(precos.index(4)) # retorna o indice do valor passado
+
+# listas no python são dinâmicas (aceitam qualquer tipo de dado)
+itens = [1,3,6,'olá', 'café', True, 10.6]
+print(itens[4])
+
+# Maneiras diferentes de gerar listas
+# Multiplicação de valores (repetição)
+lista_de_noves = [9] * 10 # repete o número de nove 9x
+print(lista_de_noves)
+
+# com string
+lista_de_noves_str = ['nove'] * 10 # repete o número de nove 9x
+print(lista_de_noves_str)
+
+# usando gerador range
+# 1 a 29
+lista_valores_ate_30 = list(range(30))
+print(lista_valores_ate_30)
+
+# gerar a partir de um string
+print(list('Bem-vindo ao treinamento')) # separa os caracteres
+
+# lista de listas (matriz)
+matriz_de_nomes = [['Carol', 30], ['Marcus', 50]]
+print(matriz_de_nomes[0]) # retorna a lista do indice 0
+print(matriz_de_nomes[:2]) # retorna as 2 listas internas inteiras
+print(matriz_de_nomes[0][0]) # retorna o indice 0 da lista indice 0 = Carol
+print(matriz_de_nomes[0][0]) # retorna o indice 0 da lista indice 0 = Carol
+print(matriz_de_nomes[1][0]) # retorna o indice 0 da lista indice 1 = Marcus
+print(matriz_de_nomes[1][1]) # retorna o indice 1 da lista indice 1 = 50
+
+
+# Desafio #1 Crie uma lista que tenha os nomes dos 3 objetos que você mais usa 
+# durante o dia e imprima ele na tela
+objetos = ['celular', 'pc', 'table']
+print(objetos)
+
+# Desafio #2 Usando apenas uma linha de código, crie uma lista de 10 a 131
+lista_numeros_10_131 = list(range(10,132))
+
+# Desafio #3 Imprima na tela o resultado da combinação da lista do desafio 1 e 
+# desafio 2
+print(objetos + lista_numeros_10_131)
+
+# Desafio #4 Crie uma lista de listas(matriz) que tenha os nomes dos 3 objetos
+# que você mais usa durante o dia, mas agora dentro de cada item você vai colocar 
+# uma informação extra, coloque o valor em reais desse objeto também e imprima ele 
+# na tela  
+matriz = [['celular', 1000],['pc', 5000], ['tablet', 3000]]
+print(matriz)
+
+
+
