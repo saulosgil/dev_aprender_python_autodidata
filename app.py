@@ -1055,5 +1055,55 @@ print(objetos + lista_numeros_10_131)
 matriz = [['celular', 1000],['pc', 5000], ['tablet', 3000]]
 print(matriz)
 
+# Encontre valores e manipulacao de itens de uma lista
+valores = list(range(1,10))
+anos = [2020, 2030, 2040, 2020]
+
+ # Adiciona um valor ao final da lista - append
+valores.append(11)
+print(valores)
+
+# unir listas
+valores.extend(anos) # adiciona no final da listas
+print(valores)
+
+# Adicionar lista
+nova_lista = valores + anos
+print(nova_lista)
+
+# Inserir em uma posição especifica (indice)
+print(anos[1]) # indice 1 = 2030
+anos.insert(1,2031) # insere um valor no indice indicado no arg 1
+print(anos)
+
+# extrair valor com base no indice
+print(anos) # indice 1 = 2031; vamos extrair ele!
+ano_2031 = anos.pop(1) # retorna o valor (pode ser armazenado em uma variável!)
+print(ano_2031)
+
+# remover um valor da lista
+print(anos)
+anos.remove(2040) # remove o ano 2040 da lista
+print(anos)
+
+# outra forma de remover
+print(anos)
+del anos[2] # deleta o item com indice 2
+print(anos)
+
+# o del permite remover uma faixa de valores
+print(valores)
+del valores[-4:] # deletar anos (elementos da lista anos)
+print(valores)
+
+# contar a ocorrencia de um valor em uma lista
+valores.append(2) # adicionei mais um 2 na lista
+print(valores)
+valores.count(2) # conta o número de 2
+
+# resetar uma lista
+valores.clear()
+print(valores) # retorna lista vazia
+
 
 
