@@ -1105,5 +1105,16 @@ valores.count(2) # conta o número de 2
 valores.clear()
 print(valores) # retorna lista vazia
 
+# Como ordenar listas simples
+valores = [3,6,2,4,9,3,8,1,5,0,5,3]
+
+valores.sort() # ordena de forma crescente
+print(valores)
+
+valores.sort(reverse=True) # ordena de forma decrescente
+print(valores)
+
+valores.reverse() # inverte a lista
+print(valores)
 
 
