@@ -2,4 +2,4 @@
 
 This repository consists of scripts related to classes and exercises of the curso Python autodidata of the [Dev Aprender](https://devaprender.com/)
 
-Obs. Onde parei Modulo 5 - aula 5
+Obs. Onde parei Modulo 5 - aula 12
