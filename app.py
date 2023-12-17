@@ -1165,4 +1165,36 @@ from itertools import zip_longest
 for produto,preco in zip_longest(produtos, precos):
     print(f'Porduto: {produto} encontrado no valor de {preco}')
 
+# Dicionarios
+'''
+Infos de uma pessoa
+    nome
+    idade
+    altura
+'''
+pessoa = ['Carol', 18, 1.60, 'Mike', 50, 1.80]
+print(pessoa)
+# Dicionário (chave, valor)
+dicionario_pessoa = {'nome': 'Carol', 'idade': 18, 'altura': 1.60}
+print(dicionario_pessoa) # facilita a interpretação das infos
 
+# Outra forma de criar dicionário (usando a fct dict)
+pessoa_2 = dict(nome='Carol', idade=18, altura=1.60)
+print(pessoa_2)
+
+# acessar valores usando a chave
+pessoa_2['idade']
+
+# imprimir todas a chaves usando key
+print(dicionario_pessoa.keys())
+
+# imprimir todos os valores usando key
+print(dicionario_pessoa.values())
+
+# imprimir tanto a chave como o valor
+print(dicionario_pessoa.items())
+
+''' Esse tipo de ação é bastante útil para fazer iterações'''
+for item in dicionario_pessoa.items():
+    print(item)
+    print(item[1])
