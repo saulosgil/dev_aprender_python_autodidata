@@ -1142,8 +1142,7 @@ descricoes = ['Descrição 1','Descrição 2', 'Descrição 3']
 for titulo, descricao in zip_longest(titulos, descricoes):
     print(f'Titulo {titulo} descrição: {descricao}')
 
-    ​# DESAFIOS 🥇
-
+# DESAFIOS 🥇
 ## DESAFIO 1
 
 # Usando as listas abaixo:
