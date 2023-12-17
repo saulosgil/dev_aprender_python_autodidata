@@ -1228,3 +1228,33 @@ print(dados_dos_sistema)
 # Tuplas permitem todos os tipos de dados conforme o exemplo abaixo
 tuplas_com_tipos_dados = ('youtube.com', 23, True, 1.2)
 print(f'{tuplas_com_tipos_dados[0]} é do tipo {type(tuplas_com_tipos_dados[0])}\n{tuplas_com_tipos_dados[1]} é do tipo {type(tuplas_com_tipos_dados[1])}\n{tuplas_com_tipos_dados[2]} é do tipo {type(tuplas_com_tipos_dados[2])}\n{tuplas_com_tipos_dados[3]} é do tipo {type(tuplas_com_tipos_dados[3])}')
+
+# Arrays - armazena colação de itens de um mesmo tipo
+from array import array
+
+'''
+link para documentação de arrays
+https://docs.python.org/pt-br/3.7/library/array.html
+'''
+
+# aceita int, float, str 
+numeros = array('i', [1,2,3,4,5,6]) # '1' espeficica o tipo conforme especificado no site, no caso, int
+print(numeros)
+
+# permite realizar todas os métodos já vistos
+numeros.append(10) # adiciona um valor no final
+print(numeros)
+
+numeros.insert(-1, 9) # adiciona item no indice indicado
+print(numeros)
+
+numeros.pop(-2) # remove o valor do indice indicado
+print(numeros)
+
+numeros.remove(10) # remove o valor indicado
+print(numeros)
+
+
+
+
+
