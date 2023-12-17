@@ -1403,3 +1403,45 @@ from operator import itemgetter
 
 cotacao_moedas.sort(key=itemgetter(1))
 print(cotacao_moedas)
+
+# Como podemos criar listas?
+# criar listas usando loops e range
+numeros = []
+
+for numero in range(10):
+    numeros.append(numero)
+
+print(numeros)
+
+# Usando a fct map
+nomes = ['Larissa', 'Rafael', 'Marcus', 'John']
+
+def aprovar_pessoa(nome):
+    return nome + ' Aprovado'
+
+map(aprovar_pessoa, nomes) # fct passa por todos os itens da lista
+print(map(aprovar_pessoa, nomes)) # Não imprime, mas podemos passar isso para uma lista
+print(list(map(aprovar_pessoa, nomes)))
+
+'''
+['Larissa Aprovado', 'Rafael Aprovado', 'Marcus Aprovado', 'John Aprovado']
+
+REPARE QUE A FCT FOI APLICADA PARA CADA ITEM DA LISTA!
+'''
+
+# DESAFIO -
+# Extrai as cores da lista a seguir e coloque as em uma nova lista.
+# Finalmente imprima a nova lista na tela.
+pinturas = [
+    ['Pintura Classica', 'Azul', 1857],
+    ['Pintura Medieval', 'Vermelha', 1867],
+    ['Pintura Moderna', 'Verde', 1897]
+]
+
+# fct para extrair cores usando pop
+def extrair_cores(pinturas):
+    return pinturas.pop(1) # extrai item da lista no indice indicado
+
+# aplica fct na lista
+cores = list(map(extrair_cores, pinturas)) 
+print(cores) # imprime lista de cores
