@@ -1254,6 +1254,28 @@ print(numeros)
 numeros.remove(10) # remove o valor indicado
 print(numeros)
 
+# Range - Gerando valores iteraveis de forma facil
+print(type(range(30))) # reparar que a class é range (permite iterar)
+
+for numero in range(30):
+    print(numero)
+
+# especificando o inicio no primeiro arg
+for numero in range(10, 30):
+    print(numero)
+
+# especificando o inicio no primeiro arg e os passos (steps)
+for numero in range(10, 30, 2):
+    print(numero)
+
+# criar lista rapidamente usando range
+resultado = list(range(0, 201, 10))
+print(resultado)
+
+
+
+
+
 
 
 
