@@ -1272,6 +1272,39 @@ for numero in range(10, 30, 2):
 resultado = list(range(0, 201, 10))
 print(resultado)
 
+# Fct Enumerate - percorre uma interação e nos dá um retorno de onde estamos
+for numero in range(11):
+    print(numero)
+
+# agora irei imprimir um indice junto com a fct enumerate
+for indice,numero in enumerate(range(1, 11), start=0): # arg start indica qual indice iniciar
+    print(indice, numero)
+
+# agora iremos usar o indice para mostrar onde estamos
+for indice,numero in enumerate(range(1, 11), start=0): # arg start indica qual indice iniciar
+    print(indice, numero)
+    if indice == 5:
+        print('Estamos na posição 5')
+
+# Exemplo com string
+nomes = ['Saulo', 'Dri', 'Alice', 'Silvandro', 'Suzeli']
+
+for indice,nome in enumerate(nomes,start=1):
+    print(indice, nome)
+    if indice == 3:
+        print('Já temos 3 pessoas cadastradas')
+
+# DESAFIOS 🥇
+# DESAFIO 1 - itere sobre a lista abaixo exibindo o número do índice + nome da fruta
+# Porém, quando o índice for 3, exiba 'Nº indice + nome da fruta EM PROMOÇÃO
+frutas = ['Maça', 'Laranja', 'Morango', 'Limão']
+
+for indice,fruta in enumerate(frutas, 0):
+    if indice == 3:
+        print(f'{indice} {fruta} EM PROMOÇÃO')
+    else:
+        print(indice, fruta)
+
 
 
 
