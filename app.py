@@ -1198,3 +1198,33 @@ print(dicionario_pessoa.items())
 for item in dicionario_pessoa.items():
     print(item)
     print(item[1])
+
+# Tuplas
+# ao invés de fazer uma atribuição de valores separados como a seguinte
+site1 = 'youtube.com'
+site2 = 'facebook.com'
+site3 = 'facebook.com'
+# ou
+valor1 = 23
+valor2 = 43
+valor3 = 65
+
+# Podemos criar uma tupla
+sites = ('youtube.com', 'facebook.com', 'facebook.com')
+valores = (23, 43, 65)
+
+# Esse formato permite acessar os valores pelo indice, mas não é possivel alterar
+# a tupla como, por exemplo, sort ou adicionar valor
+sites[1]
+sites[2]
+sites[3]
+sites[1] = 'saulo' # TypeError: 'tuple' object does not support item assignment
+sites.sort() # AttributeError: 'tuple' object has no attribute 'sort'
+
+# tuplas podem ser unidades
+dados_dos_sistema = sites + valores
+print(dados_dos_sistema)
+
+# Tuplas permitem todos os tipos de dados conforme o exemplo abaixo
+tuplas_com_tipos_dados = ('youtube.com', 23, True, 1.2)
+print(f'{tuplas_com_tipos_dados[0]} é do tipo {type(tuplas_com_tipos_dados[0])}\n{tuplas_com_tipos_dados[1]} é do tipo {type(tuplas_com_tipos_dados[1])}\n{tuplas_com_tipos_dados[2]} é do tipo {type(tuplas_com_tipos_dados[2])}\n{tuplas_com_tipos_dados[3]} é do tipo {type(tuplas_com_tipos_dados[3])}')
