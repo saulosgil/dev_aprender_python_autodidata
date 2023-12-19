@@ -1493,3 +1493,30 @@ def salario_acima_2500(salario):
         return False
 
 print(list(filter(salario_acima_2500, vagas)))
+print(list(map(salario_acima_2500, vagas)))
+
+# Sets - não pega valores duplicados
+numeros = [2,2,5,8]
+frutas = {'maça', 'uva', 'banana', 'maça', 'morango'}
+
+set_numeros = set(numeros) 
+set_frutas = set(frutas)
+
+print(set_numeros)
+print(set_frutas)
+
+# adicionar valores
+set_numeros.add(10)
+print(set_numeros)
+
+# conjuntos
+numeros1 = [2,2,5,8]
+numeros2 = [2,2,3,9]
+
+a = set(numeros1)
+b = set(numeros2)
+
+print(a.symmetric_difference(b)) # imprime os valores unicos 
+print(a.intersection(b)) # interseção
+print(a.union(b)) # união
+
