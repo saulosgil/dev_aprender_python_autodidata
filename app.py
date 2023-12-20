@@ -1742,3 +1742,41 @@ with open('json_files/desafio.json', encoding='utf-8') as arquivo_json:
 with open('json_files/desafio.json', encoding='utf-8') as arquivo_json:
     data = json.load(arquivo_json)
     print(data['user'][1]['orders'][0]['total'])
+
+# Como criar e ler arquivos JSON
+import json
+
+# cria um json
+computador_json = '''{
+  "marca": "Dell",
+  "preço": 15000
+}'''
+
+# ler arquivo
+data = json.loads(computador_json)
+print(data["preço"]) # acessa o preço pela chave
+
+# salvar um string JSON -> Arquivo JSON
+with open('computador.json', 'w', encoding='utf-8') as arquivo_json:
+    json.dump(computador_json, arquivo_json)
+
+# ler o arquivo JSON
+with open('json_files/computador.json', encoding='utf-8') as arquivo_json:
+    string_computador_json = json.load(arquivo_json) # converte JSON para string
+    dicionario_computador_json = json.loads(string_computador_json) # converte string para dicionario
+    print(dicionario_computador_json['marca']) # imprime a marca = Dell
+    print(dicionario_computador_json['preço']) # imprime o preço
+
+# DESAFIO 🥇
+# criar o seguinte JSON usando python
+personal_data = '''{
+  "name": "John Smith",
+  "age": 30,
+  "city": "New York",
+  "isStudent": true,
+  "gpa": 3.5
+}'''
+
+# salvar um string JSON -> Arquivo JSON
+with open('personal_data.json', 'w', encoding='utf-8') as arquivo_json:
+    json.dump(personal_data, arquivo_json)
