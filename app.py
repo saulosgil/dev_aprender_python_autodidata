@@ -1780,3 +1780,19 @@ personal_data = '''{
 # salvar um string JSON -> Arquivo JSON
 with open('personal_data.json', 'w', encoding='utf-8') as arquivo_json:
     json.dump(personal_data, arquivo_json)
+
+# Conversão entre coleções
+saudacao = 'Hello!'
+
+print(list(saudacao)) # em []
+print(set(saudacao)) # em {} 'remove os valores duplicados'
+print(tuple(saudacao)) # em () 'imutavel'
+
+# exemplos
+lista_de_numeros = [10, 20, 20, 50]
+print(lista_de_numeros)
+
+print(type(lista_de_numeros))
+print(set(lista_de_numeros))
+print(tuple(lista_de_numeros))
+print(tuple(lista_de_numeros.sort())) # repare que da erro devido tuple não permitir mudanças
