@@ -1520,3 +1520,225 @@ print(a.symmetric_difference(b)) # imprime os valores unicos
 print(a.intersection(b)) # interseção
 print(a.union(b)) # união
 
+# O que são e como ler arquivos JSON
+import json
+
+'''
+Usuarios1.json
+{
+    "nome": "Carol",
+    "telefone": "47-99224-8852",
+    "permissões": "basico",
+    "admin": true
+}
+'''
+with open('json_files/usuarios1.json', encoding='utf-8') as arquivo_json:
+    data = json.load(arquivo_json)
+    print(data['nome'])
+
+# meu exemplo
+with open('json_files/usuarios1.json', encoding='utf-8') as arquivo_json:
+    data = json.load(arquivo_json)
+    nome = data['nome']
+    tel = data['telefone']
+    print(f'O telefone da {nome} é {tel}')
+
+'''
+Usuarios2.json - acessar itens de uma lista
+{
+    "nome": "Carol",
+    "telefone": "47-99224-8852",
+    "permissões": [
+        "basico",
+        "intermediário",
+        "administrador"
+    ],
+    "admin": true
+}
+'''
+with open('json_files/usuarios2.json', encoding='utf-8') as arquivo_json:
+    data = json.load(arquivo_json)
+    print(data['permissões'][2]) # usa-se 2 indices!
+
+'''
+Usuarios3.json
+{
+    "usuários": [
+        {
+            "nome": "Carol",
+            "telefone": "47-99224-8852",
+            "permissões": [
+                "basico",
+                "intermediário",
+                "administrador"
+            ],
+            "admin": true
+        },
+        {
+            "nome": "Douglas",
+            "telefone": "47-99224-8852",
+            "permissões": [
+                "basico",
+                "intermediário"
+            ],
+            "admin": false
+        }
+    ]
+}
+'''
+with open('json_files/usuarios3.json', encoding='utf-8') as arquivo_json:
+    data = json.load(arquivo_json)
+    print(data['usuários'][0]['telefone']) # usa-se 3 indices!
+
+# verificar se Douglas é admin
+with open('json_files/usuarios3.json', encoding='utf-8') as arquivo_json:
+    data = json.load(arquivo_json)
+    nome = data['usuários'][1]['nome'] # pega o nome
+    eh_admin = data['usuários'][1]['admin'] # usa-se 3 indices!
+    if eh_admin == True:
+        print(f'{nome} é admin')
+    else:
+        print(f'{nome} não é admin')
+
+'''
+Usuarios4.json
+{
+    "usuários": [
+        {
+            "nome": "Carol",
+            "telefone": "47-99224-8852",
+            "permissões": [
+                "basico",
+                "intermediário",
+                "administrador"
+            ],
+            "admin": true,
+            "plano": {
+                "nome": "basico",
+                "preco": "R$20,00"
+            }
+        },
+        {
+            "nome": "Douglas",
+            "telefone": "47-99224-8852",
+            "permissões": [
+                "basico",
+                "intermediário"
+            ],
+            "admin": true,
+            "plano": {
+                "nome": "pro",
+                "preco": "R$50,00"
+            }
+        }
+    ]
+}
+'''
+with open('json_files/usuarios4.json', encoding='utf-8') as arquivo_json:
+    data = json.load(arquivo_json)
+    print(data['usuários'][0]['plano']['preco'])
+
+'''
+Usuarios4.json - inicia com uma lista, não chave!
+[
+    {
+        "nome": "Carol",
+        "telefone": "47-99224-8852",
+        "permissões": [
+            "basico",
+            "intermediário",
+            "administrador"
+        ],
+        "admin": true,
+        "plano": {
+            "nome": "basico",
+            "preco": "R$20,00"
+        }
+    },
+    {
+        "nome": "Douglas",
+        "telefone": "47-99224-8852",
+        "permissões": [
+            "basico",
+            "intermediário"
+        ],
+        "admin": false,
+        "plano": {
+            "nome": "pro",
+            "preco": "R$50,00"
+        }
+    }
+]
+'''
+with open('json_files/usuarios5.json', encoding='utf-8') as arquivo_json:
+    data = json.load(arquivo_json)
+    print(data[0]['admin'])
+
+# verificar se o primeiro da lista é admin
+with open('json_files/usuarios5.json', encoding='utf-8') as arquivo_json:
+    data = json.load(arquivo_json)
+    nome = data[0]['nome']
+    eh_admin = data[0]['admin']
+    if eh_admin ==  True:
+        print(f'{nome} é admin')
+    else:
+        print(f'{nome} não é admin')
+
+'''
+# DESAFIO 🥇
+json - desafio
+{
+    "user": [
+        {
+            "id": 1,
+            "name": "John Smith",
+            "email": "john.smith@example.com",
+            "address": {
+                "street": "123 Main St",
+                "city": "New York",
+                "state": "NY",
+                "zipcode": "10001"
+            },
+            "phone": "555-555-5555",
+            "orders": [
+                {
+                    "order_id": "A001",
+                    "total": 120.99
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Jane Doe",
+            "email": "jane.doe@example.com",
+            "address": {
+                "street": "456 Park Ave",
+                "city": "Los Angeles",
+                "state": "CA",
+                "zipcode": "90001"
+            },
+            "phone": "555-555-5556",
+            "orders": [
+                {
+                    "order_id": "C003",
+                    "total": 67.50
+                }
+            ]
+        }
+    ]
+}
+'''
+# Imprimir o e-mail do usuário com id 2
+with open('json_files/desafio.json', encoding='utf-8') as arquivo_json:
+    data = json.load(arquivo_json)
+    print(data['user'][1]['email'])
+
+# imprimir a city do usuário com id 1
+with open('json_files/desafio.json', encoding='utf-8') as arquivo_json:
+    data = json.load(arquivo_json)
+    print(data['user'][0]['address']['city'])
+
+# Imprimir o total do pedido do usuário com id 2
+with open('json_files/desafio.json', encoding='utf-8') as arquivo_json:
+    data = json.load(arquivo_json)
+    print(data['user'][1]['orders'][0]['total'])
