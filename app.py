@@ -1796,3 +1796,55 @@ print(type(lista_de_numeros))
 print(set(lista_de_numeros))
 print(tuple(lista_de_numeros))
 print(tuple(lista_de_numeros.sort())) # repare que da erro devido tuple não permitir mudanças
+
+'''
+COMO CRIAR E MODIFICAR ARQUIVOS
+'w' -> usado somente para escrever algo
+'a' -> usado para acrescentar algo
+'r' -> usado somente para ler algo
+'r+' -> usado para ler e escrever algo
+'''
+import os
+
+# criar
+with open('arquivos_criados/celular.txt', 'w') as arquivo:
+    arquivo.write('celular_1')
+
+# acrescentar - append
+with open('arquivos_criados/nomes.txt', 'a') as arquivo:
+    arquivo.write('amanda')
+
+# acrescentar com quebra de linha
+with open('arquivos_criados/nomes.txt', 'a', newline='') as arquivo:
+    arquivo.write('carlos' + os.linesep)
+
+# Usando loops - com string
+nomes = ['lucas', 'carol', 'jeff', 'douglas']
+
+with open('arquivos_criados/nomes.txt', 'a', newline='') as arquivo:
+    for nome in nomes:
+        arquivo.write(nome + os.linesep)
+
+# Usando loops - com numeros (precisa converter para strings)
+numeros = [1,2,3,4,5,6]
+
+with open('arquivos_criados/numeros.txt', 'a', newline='') as arquivo:
+    for numero in numeros:
+        arquivo.write(str(numero) + os.linesep)
+
+# ler arquivos txt
+with open('arquivos_criados/nomes.txt', 'r') as arquivo:
+    for nome in arquivo:
+        print(nome)
+
+# r+
+with open('arquivos_criados/nomes.txt', 'r+') as arquivo:
+    for nome in arquivo:
+        print(nome)
+        arquivo.write('saulo')
+
+
+
+
+
+
