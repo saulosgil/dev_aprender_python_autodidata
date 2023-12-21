@@ -1884,3 +1884,39 @@ with open('arquivos_criados/frutas.txt', 'a', encoding='utf-8', newline='') as a
 with open('arquivos_criados/Top_5_Linguagens.txt', 'w', encoding='utf-8', newline='') as arquivo:
     for linguagem in linguagens_programacao:
         arquivo.write(linguagem + os.linesep)
+
+# exceções - try e except
+try:
+    valor = int(input('Digite um valor em dolares: '))
+    print(valor * 5.25)
+except:
+    print('Favor digitar apenas números')
+
+# Não decore exceções, faça isso
+try:
+    meses = list(range(1,13))
+    print(meses[15]) # erro index out of range
+except IndexError as erro:
+    print('Favor acessar apenas índices válidos')
+    print(erro) # não se coloca para o usuário, mas utiliza-se para identificar o erro e corrigir
+
+# Finally! (execute código mesmo em casos de erro)
+internet = None
+
+try:
+    print('Fazendo conexão com a ' + internet)
+except TypeError as erro:
+    print('Não há conexão com a internet')
+finally:
+    print('Sua compra não foi realizada')
+
+# exemplo com 2 tipos de erros
+try:
+    valor = int(input('Digite um valor: '))
+    print(valor / 0)
+except ZeroDivisionError as erro: # erro de divisão por zero
+    print('Não é possível dividir por zero')
+except ValueError as erro: # erro de tipo de dado
+    print('Favor digitar apenas números')
+finally:
+    print('A operação foi cancelada!')
