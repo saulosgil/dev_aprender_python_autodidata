@@ -1920,3 +1920,39 @@ except ValueError as erro: # erro de tipo de dado
     print('Favor digitar apenas números')
 finally:
     print('A operação foi cancelada!')
+
+# Logging 
+import logging
+''''
+debug -  só estou informando informações para desenvolvedores
+info - só quero informar algo que esta acontecendo no programa, mas que não é um erro.
+warning - quero alertar sobre algo que está acontecendo, possivelmente fora do esperado,
+porém ainda não é um erro, mas pode gerar um futuramente.
+error - um erro que aconteceu na sua aplicação
+critical - um erro com consequências graves acaba de ocorrer na aplicação
+'''
+logging.debug('Logging nível debug') # não é exibido no terminal
+logging.info('Logging nível info') # não é exibido no terminal
+logging.warning('Logging nível warning') # é exibido no terminal
+logging.error('Logging nível error') # é exibido no terminal
+logging.critical('Logging nível critical') # é exibido no terminal
+
+# configurando para todos os nívels sejam exibidos no terminal
+logging.basicConfig(level=logging.DEBUG) # setar o nível inicial
+
+# testando a configuração
+logging.debug('Logging nível debug') # é exibido no terminal
+logging.info('Logging nível info') # é exibido no terminal
+logging.warning('Logging nível warning') # é exibido no terminal
+logging.error('Logging nível error') # é exibido no terminal
+logging.critical('Logging nível critical') # é exibido no terminal
+
+# armazenar os erros para serem trabalhadas - usar outros argumentos para salvar arquivo
+logging.basicConfig(level=logging.DEBUG,filename='app.log',filemode='a',format='%(levelname)s - %(message)s')
+
+logging.debug('Logging nível debug')
+logging.info('Logging nível info')
+logging.warning('Logging nível warning')
+logging.error('Logging nível error')
+logging.critical('Logging nível critical')
+
