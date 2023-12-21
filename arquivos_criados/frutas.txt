@@ -1,0 +1,9 @@
+morango
+laranja
+maça
+banana
+preto
+cinza
+amarelo
+rosa
+verde
