@@ -1948,7 +1948,7 @@ logging.error('Logging nível error') # é exibido no terminal
 logging.critical('Logging nível critical') # é exibido no terminal
 
 # armazenar os erros para serem trabalhadas - usar outros argumentos para salvar arquivo
-logging.basicConfig(level=logging.DEBUG,filename='app.log',filemode='a',format='%(levelname)s - %(message)s')
+logging.basicConfig(level=logging.DEBUG,filename='app.log',filemode='a',format='%(levelname)s - %(message)s', force=True)
 
 logging.debug('Logging nível debug')
 logging.info('Logging nível info')
