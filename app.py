@@ -1948,7 +1948,7 @@ logging.error('Logging nível error') # é exibido no terminal
 logging.critical('Logging nível critical') # é exibido no terminal
 
 # armazenar os erros para serem trabalhadas - usar outros argumentos para salvar arquivo
-logging.basicConfig(level=logging.DEBUG,filename='app.log',filemode='a',format='%(levelname)s - %(message)s', force=True)
+logging.basicConfig(level=logging.DEBUG,filename='app.log',filemode='a', force=True,format='%(levelname)s - %(message)s')
 
 logging.debug('Logging nível debug')
 logging.info('Logging nível info')
@@ -1956,3 +1956,16 @@ logging.warning('Logging nível warning')
 logging.error('Logging nível error')
 logging.critical('Logging nível critical')
 
+# Mantendo um log(histórico) de exceções
+import logging
+
+logging.basicConfig(level=logging.DEBUG,filename='app.log',filemode='a', force=True, format='%(levelname)s - %(message)s = %(asctime)s')
+
+try:
+    email = input('Digite seu email ')
+    senha = int(input('Digite sua senha: '))
+    if senha == 1234:
+        logging.info(f'{email} entrou em sua conta bancária')
+except ValueError as erro:
+    print('Favor digitar apenas números')
+    logging.warning(erro)

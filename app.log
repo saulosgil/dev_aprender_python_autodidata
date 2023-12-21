@@ -3,3 +3,7 @@ INFO - Logging nível info
 WARNING - Logging nível warning
 ERROR - Logging nível error
 CRITICAL - Logging nível critical
+WARNING:root:invalid literal for int() with base 10: 'sasa'
+INFO:root:saulosgil@hotmail.com entrou em sua conta bancária
+INFO - saulosgil@hotmail.com entrou em sua conta bancária = 2023-12-21 16:00:18,049
+WARNING - invalid literal for int() with base 10: 'shakjs' = 2023-12-21 16:00:44,929
