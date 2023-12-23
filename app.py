@@ -1969,3 +1969,52 @@ try:
 except ValueError as erro:
     print('Favor digitar apenas números')
     logging.warning(erro)
+
+# Classes e Intro a POO(Agora você entende!)
+## código solto
+marca = input('Digite a marca do seu computador: ')
+memoria = input('Digite a quantidade de memória ram: ')
+placa = input('Digite o nome da placa de vídeo: ')
+
+print(f'Seu computador é da marca {marca}')
+print(f'Seu computador possui {memoria} de memória')
+print(f'Seu computador possui uma placa de vídeo da {placa}')
+
+## função
+def exibir_info_computador():
+    marca = input('Digite a marca do seu computador: ')
+    memoria = input('Digite a quantidade de memória ram: ')
+    placa = input('Digite o nome da placa de vídeo: ')
+
+    print(f'Seu computador é da marca {marca}')
+    print(f'Seu computador possui {memoria} de memória')
+    print(f'Seu computador possui uma placa de vídeo da {placa}')
+
+exibir_info_computador()
+
+## CLASSES
+'''
+As classes em Python são estruturas que permitem criar objetos com atributos e 
+métodos. Em outras palavras, uma classe é uma representação abstrata de um objeto
+do mundo real. Por exemplo, se quisermos representar um carro em Python, podemos 
+criar uma classe chamada Carro com atributos como cor, marca e modelo, e métodos 
+como acelerar e frear.
+'''
+class Computador:
+    def __init__(self, marca, memoria_ram, placa_de_video) -> None:
+        self.marca = marca
+        self.memoria_ram = memoria_ram
+        self.placa_de_video = placa_de_video
+
+# marca, memoria e placa de video
+computador1 = Computador('Asus', '8gb', 'NVIDIA') # instancia 
+print(computador1.marca)
+print(computador1.memoria_ram)
+print(computador1.placa_de_video)
+
+computador2 = Computador('Dell', '6gb', 'iRISx') # nova instancia 
+print(computador2.marca)
+print(computador2.memoria_ram)
+print(computador2.placa_de_video)
+
+
