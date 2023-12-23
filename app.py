@@ -260,6 +260,7 @@ print(round(5.7))
 # caso queira forçar o arredondamento para baixo ou para cima, podemos utilizar o
 # biblioteca math e usar as funcões ceil e floor 
 import math
+from typing import Self
 
 print(math.ceil(2.2)) # arredonda para cima
 print(math.floor(2.2)) # arredonda para baixo
@@ -1999,10 +2000,19 @@ métodos. Em outras palavras, uma classe é uma representação abstrata de um o
 do mundo real. Por exemplo, se quisermos representar um carro em Python, podemos 
 criar uma classe chamada Carro com atributos como cor, marca e modelo, e métodos 
 como acelerar e frear.
+
+Sintaxe no Python:
+
+class test:
+    def __init__(self) -> None: 
+        pass
+
+# o self permite que os parametros acessados possam ser acessados em qualquer lugar!
+Usando self.parametro passado (ver exemplo marca do computador)
 '''
 class Computador:
     def __init__(self, marca, memoria_ram, placa_de_video) -> None:
-        self.marca = marca
+        self.marca = marca 
         self.memoria_ram = memoria_ram
         self.placa_de_video = placa_de_video
 
@@ -2016,5 +2026,32 @@ computador2 = Computador('Dell', '6gb', 'iRISx') # nova instancia
 print(computador2.marca)
 print(computador2.memoria_ram)
 print(computador2.placa_de_video)
+
+# Métodos de uma classe - ligar, desligar, exibir dados do computador.
+class Computador:
+    def __init__(self, marca, memoria_ram, placa_de_video) -> None:
+        self.marca = marca 
+        self.memoria_ram = memoria_ram
+        self.placa_de_video = placa_de_video
+    
+    def ligar(self):
+        print('Estou ligando o computador')
+
+    def desligar(self):
+        print('Estou desligando o computador')
+
+    def exibindo_dados_do_computador(self):
+        print(f'Esse computador é da marca {self.marca} com {self.memoria_ram} de memória e placa de vídeo da {self.placa_de_video}')
+
+computador1 = Computador('Asus', '8gb', 'NVIDIA')
+computador1.ligar()
+computador1.desligar()
+computador1.exibindo_dados_do_computador()
+
+# Outra instancia
+computador2 = Computador('Dell', '6gb', 'iRISx')
+computador2.ligar()
+computador2.desligar()
+computador2.exibindo_dados_do_computador()
 
 
