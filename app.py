@@ -2087,6 +2087,7 @@ computador2 = Computador('Asus', '2gb', 'ATI')
 computador2.sistema_operacional = 'Mac'
 print(computador2.sistema_operacional)
 
+# Métodos comuns VS Instância VS Classe
 
 
 
