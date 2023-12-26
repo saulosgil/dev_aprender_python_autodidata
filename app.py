@@ -2054,4 +2054,46 @@ computador2.ligar()
 computador2.desligar()
 computador2.exibindo_dados_do_computador()
 
+# Tipos de variáveis em uma classe
+class Computador:
+    
+    sistema_operacional = 'Windows 10' # defini uma variável antes da instancia
+
+    def __init__(self, marca, memoria_ram, placa_de_video) -> None:
+        self.marca = marca
+        self.memoria_ram = memoria_ram
+        self.placa_de_video = placa_de_video
+
+        # fct - ligando pc
+        def ligar(self):
+            print('Estou ligando o computador')
+
+Computador.sistema_operacional # PERMITE ACESSAR O SISTEMA OPERACIONAL
+Computador.sistema_operacional = 'Windows' # PERMITE ACESSAR O SISTEMA OPERACIONAL
+Computador.sistema_operacional # PERMITE ACESSAR O NOVO SISTEMA OPERACIONAL
+
+# Acessando e alterando as instancias
+# Não é possivel acessar marca, pq ela é uma instancia, para acessar a info precisa,
+# colocar ela numa variável
+
+# Computador.marca -> não funciona 
+computador = Computador('Dell', '8gb', 'NVDIA')
+computador.marca = 'Asus' # altera a instancia
+print(computador.marca)
+print(computador.sistema_operacional) # como não é uma instancia, mas sim uma variável criada antes da função, é possivel accessa-la desta forma.
+
+# Alterando sistema operacional
+computador2 = Computador('Asus', '2gb', 'ATI')
+computador2.sistema_operacional = 'Mac'
+print(computador2.sistema_operacional)
+
+
+
+
+
+
+
+
+
+
 
