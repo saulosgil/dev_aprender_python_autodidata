@@ -2212,3 +2212,25 @@ camera_seguranca.rotacionar_camera('direita')
 issubclass(CameraCelular, Camera)
 issubclass(CameraSeguranca, Camera)
 issubclass(Camera,CameraSeguranca)
+
+# Herança múltipla
+class Pessoa:
+    nome = 'Sou uma pessoa'
+
+    def convidar(self):
+        print('Olá sou uma pessoa, vamos ao evento?')
+
+class Profissional:
+    nome = 'Sou um profissional'
+
+    def convidar(self):
+        print('Olá sou um profissional, vamos ao evento?')
+
+class AtorProfissional(Pessoa, Profissional): # herança (classe filha)
+    pass
+
+ator_profissional = AtorProfissional()
+ator_profissional.convidar()
+
+# verifica a ordem da informação que será acessada
+print(AtorProfissional.mro())
