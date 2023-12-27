@@ -2167,6 +2167,48 @@ class Computador:
 
 print(Computador.roda_programas_pesados(6))
 
+# Herança Simples - Reutilizando outras classes
+'''
+Herança - basta inserir dentro do parenteses da class (permite sobrescrever um fct);
+'''
+class Camera:
+    def __init__(self, marca, megapixels) -> None:
+        self.marca = marca
+        self.megapixels = megapixels
 
+    def tirar_foto(self):
+        print(f'Foto tirada com a camera {self.marca} com a qualidade de {self.megapixels} megapixels')
 
+class CameraCelular(Camera): # herança - herda as funções da classe Camera
+    def __init__(self, marca, megapixels, quantidade_de_cameras) -> None:
+        super().__init__(marca, megapixels)
+        self.quantidade_de_cameras = quantidade_de_cameras
 
+    def aplicar_filtro(self, filtro):
+        print(f'Aplicando filtro {filtro}')
+    
+    def tirar_foto(self, camera_a_utilizar):
+        print(f'Foto tirada com a camera {self.marca} com a qualidade de {self.megapixels} megapixels, utilizando a câmera #{camera_a_utilizar}')
+
+class CameraSeguranca(Camera):
+    def __init__(self, marca, megapixels,horas_maxima_de_gravacao) -> None:
+        super().__init__(marca, megapixels)
+        self.horas_maxima_de_gravacao = horas_maxima_de_gravacao
+
+    def rotacionar_camera(self, direcao):
+        print('Rotacionando a câmera para {direcao}')
+
+# testando a class filha CameraCelular
+camera_celular = CameraCelular('Sony', '25mp', 4)
+camera_celular.aplicar_filtro('Azul')
+camera_celular.tirar_foto(2)
+
+# testando a class filha CameraSeguranca
+camera_seguranca = CameraSeguranca('Sony', '5mp', 10)
+camera_seguranca.rotacionar_camera('direita')
+
+# verificar se uma class é uma instancia de uma outra class, ou seja, uma subclass de outra - true or false
+# função issuclass()
+issubclass(CameraCelular, Camera)
+issubclass(CameraSeguranca, Camera)
+issubclass(Camera,CameraSeguranca)
