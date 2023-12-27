@@ -2064,9 +2064,9 @@ class Computador:
         self.memoria_ram = memoria_ram
         self.placa_de_video = placa_de_video
 
-        # fct - ligando pc
-        def ligar(self):
-            print('Estou ligando o computador')
+    # fct - ligando pc
+    def ligar(self):
+        print('Estou ligando o computador')
 
 Computador.sistema_operacional # PERMITE ACESSAR O SISTEMA OPERACIONAL
 Computador.sistema_operacional = 'Windows' # PERMITE ACESSAR O SISTEMA OPERACIONAL
@@ -2089,11 +2089,83 @@ print(computador2.sistema_operacional)
 
 # Métodos comuns VS Instância VS Classe
 
+# # métodos comuns
+# # métodos de classe (Class methods)
+'''
+Um método de classe é um método que está vinculado à classe e não ao objeto da
+classe.
 
+Eles têm acesso ao estado da classe, pois leva um parâmetro de classe que aponta
+para a classe e não a instância do objeto.
 
+Ele pode modificar um estado de classe que se aplicaria a todas as instâncias da
+classe. Por exemplo, ele pode modificar uma variável de classe que seria aplicável
+a todas as instâncias.
+'''
+class Computador:
+    
+    sistema_operacional = 'Windows 10' 
 
+    def __init__(self, marca, memoria_ram, placa_de_video) -> None:
+        self.marca = marca
+        self.memoria_ram = memoria_ram
+        self.placa_de_video = placa_de_video
 
+    # fct - ligando pc
+    def exibir_dados_do_computador(self):
+        print(self.marca, self.memoria_ram, self.placa_de_video, self.sistema_operacional)
 
+    @classmethod
+    def computador_escritorio(cls, memoria_ram):
+        return cls('Dell', memoria_ram, 'Placa de video - baixo custo')
+
+    @classmethod
+    def computador_configuracao_pesada(cls, memoria_ram):
+        return cls('Dell', memoria_ram, 'Placa de video - alto custo')
+
+# configuração para cliente de escritório
+computador_escritorio = Computador.computador_escritorio('8gb')
+computador_escritorio.exibir_dados_do_computador()
+
+# configuração para clientes de trabalho pesado (jogos, videos, 3d)
+computador_pesado = Computador.computador_configuracao_pesada('16gb')
+computador_pesado.exibir_dados_do_computador()
+
+# # métodos estáticos (Static methods)
+'''
+Não usam a instancia da classe através do self e não modificam as propriedades
+da classe através do cls.
+Pode ser útil quando uma funcionalidade pode ser utilizada repetidamente;
+'''
+class Computador:
+    
+    sistema_operacional = 'Windows 10' 
+
+    def __init__(self, marca, memoria_ram, placa_de_video) -> None:
+        self.marca = marca
+        self.memoria_ram = memoria_ram
+        self.placa_de_video = placa_de_video
+
+    # fct - ligando pc
+    def exibir_dados_do_computador(self):
+        print(self.marca, self.memoria_ram, self.placa_de_video, self.sistema_operacional)
+
+    @classmethod
+    def computador_escritorio(cls, memoria_ram):
+        return cls('Dell', memoria_ram, 'Placa de video - baixo custo')
+
+    @classmethod
+    def computador_configuracao_pesada(cls, memoria_ram):
+        return cls('Dell', memoria_ram, 'Placa de video - alto custo')
+    
+    @staticmethod
+    def roda_programas_pesados(memoria_ram):
+        if memoria_ram >= 8:
+            return True
+        else:
+            return False
+
+print(Computador.roda_programas_pesados(6))
 
 
 
