@@ -2234,3 +2234,27 @@ ator_profissional.convidar()
 
 # verifica a ordem da informação que será acessada
 print(AtorProfissional.mro())
+
+# O que são Magic/dunder Methods (Métodos especiais)
+class Pessoa:
+    def __init__(self) -> None:
+        self.nome = 'Sou uma pessoa'
+        self.habilidades = ['Habilidade 1', 'Habilidade 2', 'Habilidade 3']
+    # Representação para programadores (chamado com método repr())
+    def __repr__(self) -> str:
+        return 'Classe pessoa com propriedades nome e habilidades'
+    
+    # O que deve ser mensurado para determinar a quantidade daquela classe (chamada pelo método len())
+    def __len__(self):
+        return len(self.habilidades)
+
+pessoa = Pessoa()
+print(pessoa.nome)
+print(repr(pessoa)) # retorna a string determinada no método repr
+print(len(pessoa)) # retorna o tamanho da lista no self.habilidades
+print(dir(pessoa)) # verifica as class que podem ser utilizadas
+
+'''
+Link para documentação do Magic/Dunder Methods:
+https://docs.python.org/pt-br/3/reference/datamodel.html#specialnames
+'''
