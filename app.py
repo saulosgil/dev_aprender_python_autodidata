@@ -2258,3 +2258,62 @@ print(dir(pessoa)) # verifica as class que podem ser utilizadas
 Link para documentação do Magic/Dunder Methods:
 https://docs.python.org/pt-br/3/reference/datamodel.html#specialnames
 '''
+
+# Classes Abstratas - Criando modelos a serem seguidos
+# criar um contrato (esqueleto) -> que deve ser implementado na classe que a herda
+'''
+Um método abstrato em Python é um tipo especial de método que não possui implementação na
+classe base, mas deve ser implementado nas classes filhas. Ele serve como uma estrutura base
+para outras classes derivadas.
+A classe abstrata define métodos e atributos que devem ser implementados nas classes filhas.
+Em Python, uma classe abstrata é definida utilizando o módulo “abc” e a classe “ABC” como base.
+Para declarar uma classe abstrata, é necessário decorá-la com o decorator “@abstractmethod”.
+Isso indica que os métodos decorados devem ser implementados nas classes filhas
+'''
+from abc import ABC, abstractmethod
+
+class Camera(ABC):
+    @abstractmethod
+    def definir_tamanho_lente(self, tamanho):
+        pass
+
+class CameraProfissional(Camera):
+    def definir_tamanho_lente(self, tamanho):
+        print(f'Alterando a lente para {tamanho}')
+
+camera_profissional = CameraProfissional()
+camera_profissional.definir_tamanho_lente(5)
+
+# DESAFIO 🥇
+'''
+Crie uma classe abstrata chamada Monitor, que irá ter 2 métodos abstratos
+1 - aumentar_claridade;
+2 - reduzir_claridade.
+
+Os métodos iram receber um número que representam o quanto de claridade deve ser aumentado ou
+dominuido ao chamar eles.
+
+Após ter criado a classe abstrata, crie uma nova classe chamada de MonitorFullHD e coloque a
+implementação dos métodos aumentar_claridade e reduzir-claridade dentro deles
+'''
+from abc import ABC, abstractmethod
+
+class Monitor(ABC):
+    @abstractmethod
+    def aumentar_claridade(self, quantidade):
+        pass
+
+    @abstractmethod
+    def reduzir_claridade(self, quantidade):
+        pass
+
+class MonitorFullHD(Monitor):
+    def aumentar_claridade(self, quantidade):
+        print(f'Aumentando a claridade em {quantidade} pontos')
+
+    def reduzir_claridade(self, quantidade):
+        print(f'Reduzindo a claridade em {quantidade} pontos')
+
+monitor = MonitorFullHD()
+monitor.aumentar_claridade(5)
+monitor.reduzir_claridade(10)
