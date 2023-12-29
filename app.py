@@ -2317,3 +2317,51 @@ class MonitorFullHD(Monitor):
 monitor = MonitorFullHD()
 monitor.aumentar_claridade(5)
 monitor.reduzir_claridade(10)
+
+# Polimorfismo - Seja flexível
+'''
+O polimorfismo é um conceito importante em programação orientada a objetos (POO) que
+permite que uma subclasse tenha métodos com o mesmo nome de sua superclasse, e o programa
+saiba qual método deve ser invocado, especificamente (da super ou sub). Em Python, o
+polimorfismo pode ser implementado através do uso de classes e métodos que aceitam parâmetros
+de tipos diferentes, ou seja, que podem ser chamados com objetos de classes diferentes,
+desde que esses objetos possuam os mesmos métodos e atributos 
+'''
+class Carro:
+    def ligar(self):
+        print('Ligando o carro')
+
+class Moto:
+    def ligar(self):
+        print('Ligando a moto')
+
+# Criando um método polimorfico 
+def iniciar(veiculo):
+    veiculo.ligar()
+
+carro = Carro()
+moto = Moto()
+carro.ligar() # instancia e método 
+moto.ligar()  # instancia e método
+
+# o método iniciar é um polimorfismo, pois se adapta a situações diferentes  
+iniciar(carro)
+iniciar(moto)
+
+# Outro exemplo - função polimórfica (se adapta a cada situação em que os dados são passados)
+class Pessoa:
+    def apresentar(self, nome, idade=None, profissao=None): # none deixa esses argumentos não obrigatórios
+        if idade and profissao != None:
+            print(f'{nome},{idade} anos e {profissao}')
+        elif idade != None:
+            print(f'{nome}, {idade} anos')
+        elif profissao != None:
+            print(f'{nome}, {profissao}')
+        else:
+            print(nome)
+
+pessoa = Pessoa()
+pessoa.apresentar(nome='Saulo')
+pessoa.apresentar(nome='Saulo', idade=37)
+pessoa.apresentar(nome='Saulo', profissao='Programador')
+pessoa.apresentar(nome='Saulo', idade=37, profissao='Programador')
