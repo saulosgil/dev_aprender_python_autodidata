@@ -2365,3 +2365,51 @@ pessoa.apresentar(nome='Saulo')
 pessoa.apresentar(nome='Saulo', idade=37)
 pessoa.apresentar(nome='Saulo', profissao='Programador')
 pessoa.apresentar(nome='Saulo', idade=37, profissao='Programador')
+
+'''
+Refatoração
+'''
+
+# Renomear todas as ocorrencias - F2
+# fazer o teste trocando Calculadora por Calc e vice-versa
+class Calculadora:
+    pass
+
+calc1 = Calculadora()
+calc2 = Calculadora()
+calc3 = Calculadora()
+
+print(calc1)
+
+# Extrair função (CRTL+SHIFT+P Extract Method - Atalho: em)
+# adicao = 20 + 30 # ao extrair o método aqui, ele cria uma fct automatico
+def adicao():
+    resultado = 20 + 30
+    print(resultado)
+
+adicao()
+
+# Extrair variavel (CRTL+SHIFT+P Extract Method - Atalho: ev)
+# (60 / 2) / 50 # extrair a variavel de cada valor
+altura = 60
+largura = 2
+(altura / largura) + 50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
