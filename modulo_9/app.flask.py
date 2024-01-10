@@ -47,7 +47,6 @@ método POST:
 }
   4 - Apertar Send;
   5 - verificar STATUS para ver se foi inserido corretamente
-
 '''
 
 # Alterar uma postagem existente - PUT
@@ -57,6 +56,28 @@ def alterar_postagem(indice):
   postagens[indice].update(postagem_alterada)
 
   return jsonify(postagens[indice], 200)
+
+'''
+entrar no Postman - fazer a requisição no http://localhost:7777/postagem/1 com o
+método PUT:
+  1 - ir na aba Body;
+  2 - fazer a alteração desejada
+{
+    "título": "Novo album da banda 2023"
+}
+  4 - Apertar Send;
+  5 - verificar STATUS para ver se foi inserido corretamente
+'''
+
+# excluir uma postagem - DELETE http://localhost:7777/postagem/1
+@app.route('/postagem/<int:indice>', methods=['DELETE'])
+def excluir_postagem(indice):
+  try:
+    if postagens[indice] is not None:
+      del postagens[indice]
+      return jsonify(f'Foi excluído a postagem {postagens[indice]}', 200)
+  except:
+    return jsonify(f'Não foi possível encontrar a postagem para exclusão', 404)
 
 app.run(port=7777, host='localhost', debug=True)
 
