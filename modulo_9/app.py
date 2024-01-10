@@ -35,7 +35,7 @@ o output é:
 nova_tarefa = {'completed': False,'title': 'Lavar o carro', 'userId': 1}
 
 resultado_post = requests.post('https://jsonplaceholder.typicode.com/todos', nova_tarefa)
-pprint(resultado_post) # exibe a resposta 201 (Response [201]) que indica Sucesso na requisição deu certo   
+pprint(resultado_post) # exibe a resposta 201 (Response [201] created) que indica Sucesso na requisição deu certo   
 pprint(resultado_post.json()) # exibe o resultado em um formato mais legível
 
 '''
