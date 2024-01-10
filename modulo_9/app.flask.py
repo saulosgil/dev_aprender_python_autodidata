@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -17,11 +17,15 @@ postagens = [
   }
 ]
 
-# Rota padrão - GET
-@app.route('/',)
-
+# Rota padrão - GET http://localhost:7777
+@app.route('/')
 def obter_postagens():
   return jsonify(postagens)
+
+# Get com id - GET http://localhost:7777/postagem/1
+@app.route('/postagem/<int:indice>', methods=['GET'])
+def obter_postagem_por_indice(indice):
+  return jsonify(postagens[indice])
 
 app.run(port=7777, host='localhost', debug=True)
 
