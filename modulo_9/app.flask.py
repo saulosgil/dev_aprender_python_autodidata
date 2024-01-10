@@ -22,10 +22,33 @@ postagens = [
 def obter_postagens():
   return jsonify(postagens)
 
-# Get com id - GET http://localhost:7777/postagem/1
+# Obter postagem por id - GET http://localhost:7777/postagem/1
 @app.route('/postagem/<int:indice>', methods=['GET'])
 def obter_postagem_por_indice(indice):
   return jsonify(postagens[indice])
+
+# criar uma nova postagem - POST http://localhost:7777/postagem
+@app.route('/postagem', methods=['POST'])
+def nova_postagem():
+  postagem = request.get_json()
+  postagens.append(postagem)
+
+  return jsonify(postagem, 200)
+
+'''
+entrar no Postman - fazer a requisição no http://localhost:7777/postagem com o
+método POST:
+  1 - ir na aba Body;
+  2 - ir na aba secundária raw e colocar JSON;
+  3 - passar as informações (formato JSON);
+{
+    "autor": "Hermar Li",
+    "título": "Novo album da banda"
+}
+  4 - Apertar Send;
+  5 - verificar STATUS para ver se foi inserido corretamente
+
+'''
 
 app.run(port=7777, host='localhost', debug=True)
 
