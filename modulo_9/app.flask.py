@@ -79,5 +79,6 @@ def excluir_postagem(indice):
   except:
     return jsonify(f'Não foi possível encontrar a postagem para exclusão', 404)
 
+# roda o programa
 app.run(port=7777, host='localhost', debug=True)
 
