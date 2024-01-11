@@ -79,35 +79,6 @@ def excluir_postagem(indice):
   except:
     return jsonify(f'Não foi possível encontrar a postagem para exclusão', 404)
 
-''' API de autores'''
-@app.route('/autores')
-def obter_autores():
-  pass
-
-@app.route('/autores/<int:id_autor>', methods=['GET'])
-def obter_autores_por_id(id_autor):
-  pass
-
-@app.route('/autores', methods=['POST'])
-def novo_autor():
-  pass
-
-@app.route('/autores/<int:id_autor>', methods=['PUT'])
-def alterar_autor(id_autor):
-  pass
-
-@app.route('/autores/<int:id_autor>', methods=['DELETE'])
-def exlcuir_autor(id_autor):
-  pass
-
-
-
-
-
-
-
-
-
 # roda o programa
 app.run(port=7777, host='localhost', debug=True)
 
