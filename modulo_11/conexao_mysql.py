@@ -1,6 +1,5 @@
 import mysql.connector
 
-
 # Conectar-se a um banco de dados ou criá-lo
 conexao = mysql.connector.connect(
     user='root', 
